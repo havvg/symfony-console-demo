@@ -1,0 +1,38 @@
+<?php
+
+require_once(__DIR__ . '/bootstrap.php');
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+
+$console = new Application('Symfony Command', 'Demo');
+
+// Add a command by directly defining it.
+$console
+    ->register('demo')
+    ->setDefinition( array(
+        new InputOption('test', '', InputOption::VALUE_NONE, 'Test mode'),
+    ))
+    ->setDescription('Just a demo command, doing nothing.')
+    ->setHelp('Usage: <info>console demo [--test]</info>')
+    ->setCode(
+        function(InputInterface $input, OutputInterface $output)
+        {
+            $output->writeln('<comment>This is just a demo of the sf Command component.</comment>');
+
+            if ($input->getOption('test'))
+            {
+                $output->write("\n\t<info>Test Mode Enabled</info>\n\n");
+            }
+
+            $output->writeln("Demo completed.");
+        }
+    );
+
+// Add a - possibly more complex - command by using its own class.
+$console->add(new \Demo\Command\ExtendedCommand());
+
+$console->run();
