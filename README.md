@@ -10,3 +10,8 @@ To install, you only have to init the submodules: `git submodule init`
 # Run
 
 In order to run the application execute `php app/console`. You will be greeted with a help output.
+
+# Tests
+
+There are sample tests given. The testing framework in use is PHPUnit 3.5.13.
+An example configuration for PHPUnit is provided. To execute the tests simply run the `phpunit` command line in the root directory.
