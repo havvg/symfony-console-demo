@@ -13,5 +13,5 @@ In order to run the application execute `php app/console`. You will be greeted w
 
 # Tests
 
-There are sample tests given. The testing framework in use is PHPUnit 3.5.13.
+There are sample tests given. The testing framework in use is PHPUnit PHPUnit 3.6.
 An example configuration for PHPUnit is provided. To execute the tests simply run the `phpunit` command line in the root directory.
