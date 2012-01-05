@@ -1,5 +1,7 @@
 # About
 
+[![Build Status](https://secure.travis-ci.org/havvg/symfony2-console-demo.png)](http://travis-ci.org/havvg/symfony2-console-demo)
+
 This is a demo application on how to create command line applications based on Symfony components.
 The demo is not using the Symfony2 framework, but decoupled components the framework is built on.
 
